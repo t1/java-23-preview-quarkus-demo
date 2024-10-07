@@ -1,0 +1,19 @@
+#!/usr/bin/env java --source 23 --enable-preview
+
+import java.util.Random;
+
+final Random RANDOM = new Random();
+
+/// even though IntelliJ still wants to import stuff here, it _does_ work just like this!
+/// Just call:
+///
+/// ```bash
+/// ./main
+///```
+void main() {
+    // TODO find out, how to use a second java source file in a different package, so we can call:
+    //  var message = new Hellos().hello();
+    var authors = List.of("James", "Bill", "Guy", "Alex", "Dan", "Gavin");
+    var message = authors.get(RANDOM.nextInt(authors.size()));
+    println(message);
+}
